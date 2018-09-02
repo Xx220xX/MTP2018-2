@@ -1,6 +1,7 @@
 /*P0.c*/
 /*Henrique*/
 /*11811ETE016*/
+include<stdio.h>
 int main(int argc, char const *argv[])
 {
 	int i=0;
