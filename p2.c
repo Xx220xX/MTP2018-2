@@ -7,7 +7,7 @@ int length(char str[]) {
     int i;for (i = 0; str[i]; ++i);
     return i - 1;
 }
-int pow(int b,int e){
+int potencia(int base,int e){
     int i=0,j=1;
     for(;i<e;j=j*base,i++);
     return j;
@@ -60,7 +60,7 @@ int baseToDec(char bin[], int actualBase) {
     int j = 0;
     for (; i >= 0; i--) {
         int num = aprToNum(bin[i], actualBase);
-        soma += num * pow(actualBase,j++);
+        soma += num * potencia(actualBase,j++);
     }
     return soma;
 }
