@@ -2,16 +2,16 @@
 /*Henrique*/
 /*11811ETE016*/
 #include <stdio.h>
-#include <math.h>
-
 char dicionario[64];
-
 int length(char str[]) {
-    int i;
-    for (i = 0; str[i]; ++i);
+    int i;for (i = 0; str[i]; ++i);
     return i - 1;
 }
-
+int pow(int b,int e){
+    int i=0,j=1;
+    for(;i<e;j=j*base,i++);
+    return j;
+}
 void remove0(char bin[]) {
     int i, j = 0, grava = 0;
     for (i = 0; bin[i]; ++i) {
@@ -21,20 +21,14 @@ void remove0(char bin[]) {
         if (grava) {
             bin[j++] = bin[i];
         }
-
     }
     bin[j] = 0;
-
 }
-
 char numToApar(int num) {
     if (num > 63) { num = 1; };
     return dicionario[num];
 }
-
-
 void decTo(int dec, char bin[], int base, int bits) {
-
     bin[bits--] = 0;
     while (bits >= 0) {
         bin[bits] = numToApar(dec % base);
@@ -44,9 +38,7 @@ void decTo(int dec, char bin[], int base, int bits) {
     if (base != 2) {
         remove0(bin);
     }
-
 }
-
 int aprToNum(char num, int base) {
     if (base == 16) {
         if (num <= 'z' && num >= 'a') {
@@ -58,7 +50,6 @@ int aprToNum(char num, int base) {
         if (num == dicionario[j]) {
             return j;
         }
-       
     }
 return 1;
 }
@@ -69,11 +60,10 @@ int baseToDec(char bin[], int actualBase) {
     int j = 0;
     for (; i >= 0; i--) {
         int num = aprToNum(bin[i], actualBase);
-        soma += num * pow(actualBase, j++);
+        soma += num * pow(actualBase,j++);
     }
     return soma;
 }
-
 void brincar() {
     char bin[128];
     char nome[] = "ELA E LINDA";
@@ -104,9 +94,7 @@ void criarDicionario() {
     }
     dicionario[62] = '/';
     dicionario[63] = '+';
-
 }
-
 int main() {
     criarDicionario();
     int escolha = 0;
@@ -131,7 +119,6 @@ int main() {
         case 4://hex to bin
             scanf("%s", str);
             decTo(baseToDec(str, 16), str, 2, 15);
-
             printf("%s", str);
             break;
         case 5:
