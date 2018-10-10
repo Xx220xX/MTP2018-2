@@ -1,3 +1,6 @@
+/*p2.c*/
+/*Henrique*/
+/*11811ETE016*/
 #include <stdio.h>
 void integerValueOf(char *str,int *n){
 		if(*str){
