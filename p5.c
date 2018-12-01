@@ -43,6 +43,7 @@ vetor[i] = (max-min)*lcg_rand_01(r) + min;
  		}
  		return 1;
  }
+
 int main(){
 	LCG random;
 	semente(&random,123456); 
