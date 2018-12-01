@@ -13,3 +13,4 @@ int main(){
 		 printf("%s %s",numero,estado==0?"e multiplo de 3":"nao e");
 	return 0;
 	}
+ 
