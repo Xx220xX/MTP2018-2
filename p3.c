@@ -10,7 +10,7 @@ void integerValueOf(char *str,int *n){
     }
 }
 int main(){
-	char str[256]="";
+	char str[256]=""; 
 	int n;
 	scanf("%s",str);
 	integerValueOf(&str[0], &n);
