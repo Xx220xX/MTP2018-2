@@ -11,7 +11,7 @@ void integerValueOf(char *str,int *n){
 }
 int main(){
 	char str[256]=""; 
-	int n;
+	int n=0;
 	scanf("%s",str);
 	integerValueOf(&str[0], &n);
 	printf("%d",n);
