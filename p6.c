@@ -20,7 +20,7 @@ int main(){
        		p.y[i] = sin(i*2.0*M_PI/(n-1));
 	}
 	for(i=0;i<n;i++){
-		printf("(%.3lf,%.3lf)\n",p.x[i],p.y[i]);
+		printf("%.3lf,%.3lf\n",p.x[i],p.y[i]);
 	}
 	free(p.x);
 	free(p.y);
