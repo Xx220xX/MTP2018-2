@@ -26,7 +26,7 @@ int main() {
         }
         file = fopen("pontos.dat", "w");
         for (i = 0; i < n; i++) {
-            fprintf(file, "(%.3lf,%.3lf)\n", p.x[i], p.y[i]);
+            fprintf(file, "%.3lf,%.3lf\n", p.x[i], p.y[i]);
         }
 
         fclose(file);
