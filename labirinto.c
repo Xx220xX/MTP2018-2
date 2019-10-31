@@ -87,7 +87,7 @@ void printaM(char mat[][N) {
 }
 
 int main() {
-    Pontos p[25];
+    Pontos p[N*N];
     p[0].i = '@';
     p[0].j = '@';
 
